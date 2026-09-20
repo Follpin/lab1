@@ -11,7 +11,7 @@ StackAnalyzer::StackAnalyzer(int cardsPerSuit, int totalCards)
     }
 }
 
-double StackAnalyzer::computeMedian(const std::vector<std::size_t>& lenCnt, std::size_t totalStackCnt) const {
+double StackAnalyzer::calculateMedian(const std::vector<std::size_t>& lenCnt, std::size_t totalStackCnt) const {
     if (totalStackCnt == 0) {
         return 0.0;
     }
@@ -89,7 +89,7 @@ SimulationResult StackAnalyzer::analyze() const {
     }
 
     double avgLen = static_cast<double>(totalCards) / static_cast<double>(totalStackCnt);
-    double medLen = computeMedian(lenCnt, totalStackCnt);
+    double medLen = calculateMedian(lenCnt, totalStackCnt);
 
     return SimulationResult{
         totalStackCnt,

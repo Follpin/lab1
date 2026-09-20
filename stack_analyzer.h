@@ -17,9 +17,13 @@ private:
     int cardsPerSuit;
     int totalCards;
 
-    double computeMedian(const std::vector<std::size_t>& lenCnt, std::size_t totalStackCnt) const;
+    // Calculates median stack length 
+    double calculateMedian(const std::vector<std::size_t>& lenCnt, std::size_t totalStackCnt) const;
 
 public:
+    // Initialize analyzer with validation
     StackAnalyzer(int cardsPerSuit, int totalCards);
+
+    //Executes dealing simulation and calculates metrics
     SimulationResult analyze() const;
 };

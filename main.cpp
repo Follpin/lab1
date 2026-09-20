@@ -1,3 +1,4 @@
+//MSBuild 17.14.19 (C++23)
 #include "stack_analyzer.h"
 #include <iostream>
 #include <iomanip>
